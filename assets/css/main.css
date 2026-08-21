@@ -144,17 +144,19 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
-/* fade the cover into the page background, as ult.graphic does */
+/* fade the bottom of the cover into the page background */
 .cover::after {
   content: "";
   position: absolute;
   inset: 0;
-  box-shadow: 0em -3em 10em 10em var(--color-bg) inset,
-    0rem -3rem 5rem 3rem var(--color-bg) inset,
-    0rem -1rem 1rem 0rem var(--color-bg) inset;
+  background: linear-gradient(
+    to bottom,
+    transparent 55%,
+    var(--color-bg) 100%
+  );
 }
 
 /* pages without a cover still need clearance under the fixed navbar */
