@@ -1,7 +1,7 @@
 /* Design tokens taken from the Super.so ult.graphic dark theme previously
    used at maikeosborne.com, so the static site matches the old one.
    Body text is Literata (the Notion "serif" page font); headings and UI
-   elements are Roboto. */
+   elements are Space Grotesk. */
 
 @font-face {
   font-family: "Space Grotesk";
