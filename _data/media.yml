@@ -1,0 +1,72 @@
+# Media & Articles database, exported from Notion. Ordered as on the site.
+- title: "Insuring Emerging Risks from AI"
+  venue: "Oxford Martin School Policy Paper"
+  year: 2024
+  url: "https://www.oxfordmartin.ox.ac.uk/publications/insuring-emerging-risks-from-ai"
+  cover: "/assets/img/media/insuring-emerging-risks.jpg"
+
+- title: "Generative AI and the Future of Work: A Reappraisal"
+  venue: "The Brown Journal of World Affairs"
+  year: 2024
+  url: "https://bjwa.brown.edu/30-1/generative-ai-and-the-future-of-work-a-reappraisal/"
+  cover: "/assets/img/media/generative-ai-reappraisal.jpg"
+
+- title: "Artificial intelligence holds huge promise – and peril. Let’s choose the right path"
+  venue: "The Guardian"
+  year: 2023
+  url: "https://www.theguardian.com/commentisfree/2023/may/20/artificial-intelligence-holds-huge-promise-and-peril-lets-choose-the-right-path"
+  cover: "/assets/img/media/ai-promise-and-peril.jpg"
+
+- title: "Meeting the needs of society with AI—Professor Michael Osborne"
+  venue: "University of Oxford"
+  year: 2023
+  url: "https://oxford.shorthandstories.com/ai-michael-osborne/index.html"
+  cover: "/assets/img/media/meeting-needs-of-society.jpg"
+
+- title: "Carl Benedikt Frey and Michael Osborne on how AI benefits lower-skilled workers"
+  venue: "The Economist"
+  year: 2023
+  url: "https://www.economist.com/by-invitation/2023/09/18/carl-benedikt-frey-and-michael-osborne-on-how-ai-benefits-lower-skilled-workers"
+  cover: "/assets/img/media/economist-lower-skilled.jpg"
+
+- title: "Jimmy’s Jobs of the Future—Michael Osborne"
+  venue: "Jimmy’s Jobs of the Future"
+  year: 2023
+  url: "https://open.spotify.com/episode/2ZCXyUOZukG2HaQgARXpCq"
+  cover: "/assets/img/media/jimmys-jobs.jpg"
+
+- title: "AI interview: Michael Osborne, professor of machine learning"
+  venue: "Computer Weekly"
+  year: 2023
+  url: "https://www.computerweekly.com/news/365531613/AI-interview-Michael-Osborne-professor-of-machine-learning"
+  cover: "/assets/img/media/ai-interview-computer-weekly.jpg"
+
+- title: "Probabilistic Numerics: Computation as machine learning"
+  venue: "Cambridge University Press"
+  year: 2022
+  url: "https://www.probabilistic-numerics.org/textbooks/"
+  cover: "/assets/img/media/probabilistic-numerics.jpg"
+
+- title: "AI and the Arts: How Machine Learning is Changing Creative Work"
+  venue: "Oxford Internet Institute"
+  year: 2022
+  url: "https://www.oii.ox.ac.uk/news-events/reports/ai-the-arts/"
+  cover: "/assets/img/media/ai-and-the-arts.jpg"
+
+- title: "Machine learning enables completely automatic tuning of a quantum device faster than human experts"
+  venue: "Nature Communications"
+  year: 2020
+  url: "https://www.nature.com/articles/s41467-020-17835-9"
+  cover: "/assets/img/media/quantum-device-tuning.jpg"
+
+- title: "The Future of Skills: Employment in 2030"
+  venue: "Pearson"
+  year: 2017
+  url: "https://futureskills.pearson.com/"
+  cover: "/assets/img/media/future-of-skills.jpg"
+
+- title: "The future of employment: How susceptible are jobs to computerisation?"
+  venue: "Oxford Martin School"
+  year: 2013
+  url: "https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment/"
+  cover: "/assets/img/media/future-of-employment.jpg"

@@ -1,0 +1,39 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+cover: /assets/img/covers/talks.jpg
+---
+
+<h1>Talks</h1>
+
+<div class="prose">
+  <p>Maike regularly gives keynotes, fireside chats, and interactive sessions on AI and the future of work for select audiences all over the world, on topics including the following.</p>
+  <ul>
+    <li><strong>The Future of Work,</strong> discussing how AI is transforming industries, job markets, and the skills required for the future.</li>
+    <li><strong>Ethics and Governance of AI,</strong> exploring the ethical considerations, societal impacts, and regulatory challenges of rapidly-changing AI technologies.</li>
+    <li><strong>Responsible High-Stakes Applications of AI,</strong> through the lens of <a href="https://www.mindfoundry.ai">Mind Foundry’s</a> real-world deployments, the challenges of deploying AI responsibly for applications in which you cannot afford to be wrong—such as in insurance, infrastructure and national security.</li>
+  </ul>
+  <p>For more information on Maike’s speaking engagements, please contact <a href="https://www.chartwellspeakers.com/speaker/michael-osborne/">Karen O'Donnell at Chartwell Speakers.</a></p>
+  <p>Please note that talks below were given before Maike’s transition in 2026.</p>
+</div>
+
+<div class="gallery medium">
+  {% for talk in site.data.talks %}
+  <a class="card" href="{{ talk.url }}" target="_blank" rel="noopener">
+    <div class="card-cover">
+      <img src="{{ talk.cover }}" alt="{{ talk.title }}" loading="lazy">
+    </div>
+    <span class="card-badge">{{ talk.duration_mins }} min</span>
+    <div class="card-content">
+      <p class="card-title">{{ talk.title }}</p>
+      <p class="card-meta">{{ talk.location }}</p>
+      <p class="card-meta">{{ talk.year }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<p class="prose">More videos of Maike’s talks, to academic audiences, are <a href="https://www.robots.ox.ac.uk/~mosb/media/">available on her academic site.</a></p>
+
+<p class="credit">Header image by <a href="https://unsplash.com/photos/a-large-building-with-a-clock-tower-on-top-of-it-4zCgSAgTZig">Natalie Leung.</a></p>

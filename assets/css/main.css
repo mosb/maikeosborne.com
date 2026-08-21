@@ -1,0 +1,480 @@
+/* Design tokens taken from the Super.so ult.graphic dark theme previously
+   used at maikeosborne.com, so the static site matches the old one.
+   Body text is Literata (the Notion "serif" page font); headings and UI
+   elements are Roboto. */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/roboto-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/literata-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Literata";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/literata-700.woff2") format("woff2");
+}
+
+:root {
+  --color-bg: #2f2f2f;
+  --color-text: #c0c0c0;
+  --color-text-light: #9b9b9b;
+  --color-heading: #c9c9c9;
+  --color-border: #505050;
+  --color-card-bg: #262626;
+  --color-card-bg-hover: #2f2f2f;
+  --color-accent: hsl(242, 18%, 63%);
+  --color-quote-bg: hsl(16, 19%, 22%);
+  --color-cta-bg: hsl(16, 26%, 58%);
+  --navbar-bg: rgba(25, 25, 25, 0.6);
+  --navbar-text: #e1e1e1;
+  --card-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px -10px;
+  --sans-font: "Roboto", Helvetica, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", "Noto Sans", sans-serif;
+  --serif-font: "Literata", Georgia, serif;
+  --radius: 8px;
+  --radius-inner: 6px;
+  --layout-max-width: 1300px;
+  --page-padding: 96px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--serif-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- navbar ---------- */
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: var(--layout-max-width);
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0 1em;
+  border-radius: var(--radius);
+  background: var(--navbar-bg);
+  backdrop-filter: blur(36px);
+  -webkit-backdrop-filter: blur(36px);
+  font-family: var(--sans-font);
+}
+
+.navbar a {
+  color: var(--navbar-text);
+  text-decoration: none;
+}
+
+.navbar-logo {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.navbar-links a {
+  padding: 0.5em 0.75em;
+  border-radius: var(--radius-inner);
+  font-size: 0.95em;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.navbar-links a:hover,
+.navbar-links a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- header cover ---------- */
+
+.cover {
+  position: relative;
+  height: 21em;
+  max-width: calc(var(--layout-max-width) * 1.5);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+/* fade the cover into the page background, as ult.graphic does */
+.cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0em -3em 10em 10em var(--color-bg) inset,
+    0rem -3rem 5rem 3rem var(--color-bg) inset,
+    0rem -1rem 1rem 0rem var(--color-bg) inset;
+}
+
+/* pages without a cover still need clearance under the fixed navbar */
+main.no-cover {
+  padding-top: 8em;
+}
+
+/* ---------- content ---------- */
+
+main {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 2em var(--page-padding) 6em;
+}
+
+main > :first-child {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  color: var(--color-heading);
+  font-family: var(--sans-font);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin: 1.2em 0 0.25em;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.6rem; }
+
+p, li {
+  line-height: 1.75;
+  margin: 0 0 0.5em;
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+  text-decoration-color: var(--color-text);
+}
+
+hr {
+  border: none;
+  margin: 6em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+figcaption {
+  color: var(--color-text-light);
+  font-size: 0.9em;
+}
+
+.credit {
+  margin-top: 3em;
+}
+
+/* ---------- two-column blocks ---------- */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 2em;
+}
+
+.two-col h1 {
+  margin-top: 0;
+}
+
+.two-col figure {
+  margin: 0;
+}
+
+.two-col figure img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* ---------- quote ---------- */
+
+blockquote {
+  margin: 2em 0;
+  padding: 1.7rem;
+  text-align: center;
+  border-radius: var(--radius-inner);
+  font-family: var(--sans-font);
+}
+
+blockquote.bg-brown {
+  background: var(--color-quote-bg);
+}
+
+blockquote p {
+  line-height: 1.75;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- CTA button ---------- */
+
+.cta {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: var(--radius-inner);
+  background: var(--color-cta-bg);
+  color: var(--color-bg);
+  font-family: var(--sans-font);
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0em 1em 1em 0em hsla(16, 26%, 58%, 0.3);
+  transition: 0.2s;
+}
+
+.cta a:hover {
+  background: hsl(16, 26%, 68%);
+  box-shadow: 0em 2em 2em 0em hsla(16, 26%, 58%, 0.5);
+}
+
+/* ---------- stats ---------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin: 3em 0;
+}
+
+.stat {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-inner);
+  padding: 1.7rem;
+  box-shadow: var(--card-shadow);
+}
+
+.stat h3 {
+  color: var(--color-accent);
+  margin: 0 0 0.25em;
+}
+
+.stat p {
+  margin: 0;
+}
+
+/* ---------- bookmark card ---------- */
+
+.bookmark {
+  display: block;
+  margin: 2em 0;
+  padding: 1.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.3s ease-in;
+}
+
+.bookmark:hover {
+  background: var(--color-card-bg);
+}
+
+.bookmark-title {
+  margin: 0 0 0.25em;
+}
+
+.bookmark-description {
+  color: var(--color-text-light);
+  font-size: 0.85em;
+  margin: 0 0 1.5em;
+}
+
+.bookmark-domain {
+  font-family: var(--sans-font);
+  font-size: 0.85em;
+  margin: 0;
+}
+
+/* ---------- card galleries ---------- */
+
+.gallery {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  margin: 2em 0;
+}
+
+.gallery.medium { grid-template-columns: 1fr 1fr; }
+.gallery.small { grid-template-columns: 1fr 1fr 1fr; }
+
+.card {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-card-bg);
+  box-shadow: var(--card-shadow);
+  text-decoration: none;
+  font-family: var(--sans-font);
+  transition: 0.3s ease-out;
+}
+
+.card-cover {
+  overflow: hidden;
+}
+
+.card-cover img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: 1s ease-out;
+}
+
+.gallery.medium .card-cover img { height: 260px; }
+.gallery.small .card-cover img { height: 172px; }
+
+.card:hover .card-cover img {
+  transform: scale(1.2);
+}
+
+.card:hover {
+  background: var(--color-card-bg-hover);
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  z-index: 2;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.card-content {
+  padding: 1rem 1.3rem;
+}
+
+.card-title {
+  color: var(--color-heading);
+  font-weight: 500;
+  margin: 0 0 0.5em;
+}
+
+.card-meta {
+  color: var(--color-text-light);
+  font-size: 0.8em;
+  margin: 0 0 0.25em;
+}
+
+.card-domain {
+  display: inline-block;
+  margin: 0 0 0.25em;
+  color: var(--color-text-light);
+  font-size: 0.8em;
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+}
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 880px) {
+  :root {
+    --page-padding: 24px;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.6rem; }
+
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5em 1em;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cover { height: 15em; }
+
+  .two-col,
+  .stats,
+  .gallery.medium,
+  .gallery.small {
+    grid-template-columns: 1fr;
+  }
+}

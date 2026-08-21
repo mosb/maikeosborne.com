@@ -1,0 +1,28 @@
+# Talks database, exported from Notion. Ordered as on the site.
+- title: "Computerisation and the Reinvention of Work"
+  duration_mins: 20
+  location: "Berlin, Germany"
+  year: 2015
+  url: "https://www.youtube.com/watch?v=61JyvmQXpww&t=28s"
+  cover: "/assets/img/talks/computerisation-reinvention-of-work.jpg"
+
+- title: "Future of Working: The Future of Employment & Job Automation"
+  duration_mins: 35
+  location: "Brisbane, Australia"
+  year: 2016
+  url: "https://youtu.be/uW9H2icp8BE?si=EXahVT4HJnL6ZyL-"
+  cover: "/assets/img/talks/future-of-working.jpg"
+
+- title: "The Impact of Artificial Intelligence on Jobs"
+  duration_mins: 65
+  location: "Montreal, Canada"
+  year: 2018
+  url: "https://youtu.be/-eQNObP6QrQ?si=1Y61L_XJpta_F3_e"
+  cover: "/assets/img/talks/impact-of-ai-on-jobs.jpg"
+
+- title: "10 Years Later: Michael Osborne's Predictions on AI and the Future of Work"
+  duration_mins: 25
+  location: "Tokyo, Japan"
+  year: 2023
+  url: "https://www.youtube.com/watch?v=T5ET4gnDJ54"
+  cover: "/assets/img/talks/ten-years-later.jpg"

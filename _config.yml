@@ -1,0 +1,10 @@
+title: Maike Osborne
+description: AI expert, AI entrepreneur, and AI speaker
+url: "https://maikeosborne.com"
+
+exclude:
+  - notion-export
+  - "*.zip"
+  - Gemfile
+  - Gemfile.lock
+  - vendor

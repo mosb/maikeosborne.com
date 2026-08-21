@@ -1,0 +1,28 @@
+---
+layout: default
+title: Media & Articles
+permalink: /media-articles/
+cover: /assets/img/covers/media-articles.jpg
+---
+
+<h1>Media &amp; Articles</h1>
+
+<p class="prose">As a leading voice on AI and its impact on society, Maike is a frequent contributor to both the popular press and the scientific literature. A selected sample of such pieces is below, with a more complete selection available on Maike’s <a href="https://www.robots.ox.ac.uk/~mosb/publications_code/">academic site</a>.</p>
+
+<div class="gallery small">
+  {% for item in site.data.media %}
+  <a class="card" href="{{ item.url }}" target="_blank" rel="noopener">
+    <div class="card-cover">
+      <img src="{{ item.cover }}" alt="{{ item.title }}" loading="lazy">
+    </div>
+    <div class="card-content">
+      <p class="card-title">{{ item.title }}</p>
+      <span class="card-domain">{{ item.url | split: "/" | slice: 2 | first }}</span>
+      <p class="card-meta">{{ item.venue }}</p>
+      <p class="card-meta">{{ item.year }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<p class="credit">Header image by <a href="https://unsplash.com/@sonance">Viktor Forgacs</a>.</p>
